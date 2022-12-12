@@ -16,8 +16,12 @@ public class RedisConfig {
     @Bean
     public JedisConnectionFactory connectionFactory() {
         RedisStandaloneConfiguration configuration = new RedisStandaloneConfiguration();
-        configuration.setHostName("my-redis-store.5w9upe.0001.use2.cache.amazonaws.com");
-        configuration.setPort(6379);
+
+//Set ip addresses here
+       // configuration.setHostName("my-redis-store.5w9upe.0001.use2.cache.amazonaws.com");
+       
+configuration.setHostName("");
+ configuration.setPort(6379);
         return new JedisConnectionFactory(configuration);
     }
 
